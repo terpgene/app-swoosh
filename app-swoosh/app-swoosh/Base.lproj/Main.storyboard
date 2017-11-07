@@ -31,21 +31,21 @@
                                 <color key="backgroundColor" red="0.088013985600936567" green="0.08737150756230086" blue="0.089418717616580268" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="GO ALL IN" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Pze-RW-M41">
-                                <rect key="frame" x="-33" y="118" width="441" height="66"/>
+                                <rect key="frame" x="37.5" y="118" width="300" height="66"/>
                                 <fontDescription key="fontDescription" name="Avenir-Medium" family="Avenir" pointSize="48"/>
                                 <color key="textColor" red="0.99853190760186072" green="1" blue="0.97799854047154733" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ON GOING ALL OUT" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="r1a-Bo-bor">
-                                <rect key="frame" x="-33" y="180" width="441" height="33"/>
+                                <rect key="frame" x="37.5" y="180" width="300" height="33"/>
                                 <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="24"/>
                                 <color key="textColor" red="0.99853190759999999" green="1" blue="0.97799854050000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Find a team in your city &amp; dominate the league" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="441" translatesAutoresizingMaskIntoConstraints="NO" id="cYF-2V-nWO">
-                                <rect key="frame" x="-23" y="241" width="441" height="57.5"/>
+                                <rect key="frame" x="47.5" y="241" width="300" height="57.5"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="441" id="G3t-k5-2av"/>
+                                    <constraint firstAttribute="width" constant="300" id="G3t-k5-2av"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="Avenir-Medium" family="Avenir" pointSize="21"/>
                                 <color key="textColor" red="0.99853190759999999" green="1" blue="0.97799854050000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -55,12 +55,15 @@
                                 <rect key="frame" x="0.0" y="604" width="375" height="48"/>
                                 <color key="backgroundColor" red="0.17270105051483012" green="0.17144038004925" blue="0.17545741580310881" alpha="0.51914612676056338" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="343" id="hk8-ek-L2n"/>
+                                    <constraint firstAttribute="width" id="hk8-ek-L2n"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="26"/>
                                 <state key="normal" title="GET STARTED">
                                     <color key="titleColor" red="0.98429040302649984" green="0.97710535211366289" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
+                                <connections>
+                                    <segue destination="27N-xx-iVr" kind="show" id="CEJ-at-Lpe"/>
+                                </connections>
                             </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="swooshLogo" translatesAutoresizingMaskIntoConstraints="NO" id="fg4-7T-tI6">
                                 <rect key="frame" x="128" y="55" width="119" height="20"/>
@@ -166,6 +169,17 @@
                                     <color key="titleColor" red="0.98429040300000004" green="0.97710535210000005" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="imP-WA-3Bi">
+                                <rect key="frame" x="19" y="25" width="83" height="24"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="83" id="BLT-5U-M1I"/>
+                                    <constraint firstAttribute="height" constant="24" id="uQU-Md-nNt"/>
+                                </constraints>
+                                <state key="normal" image="backButton"/>
+                                <connections>
+                                    <segue destination="aaJ-zg-yk1" kind="unwind" unwindAction="unwindFromSkillVCWithUnwindSegue:" id="6HF-tz-hFD"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -179,7 +193,9 @@
                             <constraint firstItem="ZmD-gP-pJJ" firstAttribute="trailing" secondItem="wDe-Gq-aP0" secondAttribute="trailing" id="fJO-DX-cyt"/>
                             <constraint firstItem="ZmD-gP-pJJ" firstAttribute="trailing" secondItem="Pyz-dd-d2c" secondAttribute="trailing" id="oSL-bM-NoQ"/>
                             <constraint firstItem="rTf-kP-wmA" firstAttribute="trailing" secondItem="ZmD-gP-pJJ" secondAttribute="trailing" id="rNq-JP-NTf"/>
+                            <constraint firstItem="imP-WA-3Bi" firstAttribute="top" secondItem="ZmD-gP-pJJ" secondAttribute="top" constant="5" id="sro-HU-uX9"/>
                             <constraint firstItem="rTf-kP-wmA" firstAttribute="leading" secondItem="ZmD-gP-pJJ" secondAttribute="leading" id="uVQ-sl-GHu"/>
+                            <constraint firstItem="imP-WA-3Bi" firstAttribute="leading" secondItem="Day-Od-raj" secondAttribute="leadingMargin" constant="3" id="yTO-bO-PQK"/>
                             <constraint firstItem="rTf-kP-wmA" firstAttribute="bottom" secondItem="ZmD-gP-pJJ" secondAttribute="bottom" id="yWj-bG-rbX"/>
                             <constraint firstItem="ZmD-gP-pJJ" firstAttribute="bottom" secondItem="wDe-Gq-aP0" secondAttribute="bottom" constant="15" id="zcD-5r-A8i"/>
                         </constraints>
@@ -187,8 +203,9 @@
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qbk-Od-vUd" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="aaJ-zg-yk1" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="941.60000000000002" y="131.78410794602701"/>
+            <point key="canvasLocation" x="1009" y="132"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="2HG-Ut-46P">
@@ -273,10 +290,11 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3yV-7a-oEa" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1720.8" y="130.88455772113943"/>
+            <point key="canvasLocation" x="1918" y="132"/>
         </scene>
     </scenes>
     <resources>
+        <image name="backButton" width="29" height="24"/>
         <image name="beginnerBallerBG" width="414" height="736"/>
         <image name="desiredLeagueBG" width="414" height="736"/>
         <image name="swooshLogo" width="119" height="20"/>
