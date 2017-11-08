@@ -94,10 +94,6 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
-                    <connections>
-                        <outlet property="bgImg" destination="5uO-kW-JUu" id="J7I-6E-bVv"/>
-                        <outlet property="swoosh" destination="5uO-kW-JUu" id="uCh-WF-vlF"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
@@ -142,6 +138,9 @@
                                         <state key="normal" title="Mens">
                                             <color key="titleColor" red="0.98429040300000004" green="0.97710535210000005" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
+                                        <connections>
+                                            <action selector="onMensTapped:" destination="27N-xx-iVr" eventType="touchUpInside" id="6EE-mh-Nmf"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rJm-ck-H3L" customClass="BorderButton" customModule="app_swoosh" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="98" width="375" height="48"/>
@@ -150,6 +149,9 @@
                                         <state key="normal" title="Womens">
                                             <color key="titleColor" red="0.98429040300000004" green="0.97710535210000005" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
+                                        <connections>
+                                            <action selector="onWomensTapped:" destination="27N-xx-iVr" eventType="touchUpInside" id="egS-Fa-XWT"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BVU-nw-Ywl" customClass="BorderButton" customModule="app_swoosh" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="196" width="375" height="48"/>
@@ -161,13 +163,17 @@
                                     </button>
                                 </subviews>
                             </stackView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wDe-Gq-aP0" customClass="BorderButton" customModule="app_swoosh" customModuleProvider="target">
+                            <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wDe-Gq-aP0" customClass="BorderButton" customModule="app_swoosh" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="604" width="375" height="48"/>
                                 <color key="backgroundColor" red="0.17270105050000001" green="0.17144038" blue="0.17545741579999999" alpha="0.51914612680000005" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" name="Avenir-Light" family="Avenir" pointSize="26"/>
                                 <state key="normal" title="NEXT">
                                     <color key="titleColor" red="0.98429040300000004" green="0.97710535210000005" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
+                                <connections>
+                                    <action selector="onNextTapped:" destination="27N-xx-iVr" eventType="touchUpInside" id="ifS-D2-kxN"/>
+                                    <segue destination="Luc-GJ-mGX" kind="show" identifier="skillVCSegue" id="Nov-CQ-VON"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="imP-WA-3Bi">
                                 <rect key="frame" x="19" y="25" width="83" height="24"/>
@@ -201,6 +207,9 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="ZmD-gP-pJJ"/>
                     </view>
+                    <connections>
+                        <outlet property="nextBtn" destination="wDe-Gq-aP0" id="B21-1s-5dB"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qbk-Od-vUd" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="aaJ-zg-yk1" userLabel="Exit" sceneMemberID="exit"/>
